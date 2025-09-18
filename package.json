@@ -3,16 +3,12 @@
   "version": "1.0.0",
   "description": "App to resize Image (study Electronjs)",
   "main": "main.js",
-
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourname/yourrepo"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron-forge start",
     "package": "electron-forge package",
-    "make": "electron-forge make"
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
   },
   "author": "TrungHau",
   "license": "MIT",
@@ -24,6 +20,7 @@
   "devDependencies": {
     "@electron-forge/cli": "^7.9.0",
     "@electron-forge/maker-squirrel": "^7.9.0",
+    "@electron-forge/publisher-github": "^7.9.0",
     "electron": "^38.1.2"
   },
   "config": {
@@ -39,6 +36,21 @@
           }
         }
       ]
-    }
+    },
+    "publishers": [
+      {
+        "name": "@electron-forge/publisher-github",
+        "config": {
+          "repository": {
+            "owner": "trunghau27092001",
+            "name": "https://github.com/trunghau27092001/ResizeImage"
+          },
+          "prerelease": false,
+          "draft": true
+        }
+      }
+    ]
   }
+
+  
 }

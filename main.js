@@ -4,7 +4,10 @@ const path = require('path')
 const os = require('os')
 const fs = require('fs')
 const resizeImg = require('resize-img')
-require('update-electron-app')()
+require('update-electron-app')({
+  repo: 'your-username/your-repo', 
+  updateInterval: '1 hour',
+});
 
 process.env.NODE_ENV === 'development'
 const isMacOS = process.platform === 'darwin'
