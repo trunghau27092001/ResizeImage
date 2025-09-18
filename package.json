@@ -1,0 +1,44 @@
+{
+  "name": "imageresize_app",
+  "version": "1.0.0",
+  "description": "App to resize Image (study Electronjs)",
+  "main": "main.js",
+
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/yourrepo"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "TrungHau",
+  "license": "MIT",
+  "dependencies": {
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0",
+    "update-electron-app": "^3.1.1"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.9.0",
+    "@electron-forge/maker-squirrel": "^7.9.0",
+    "electron": "^38.1.2"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "assets/icon"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "ResizeImageApp"
+          }
+        }
+      ]
+    }
+  }
+}
